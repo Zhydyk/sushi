@@ -1,71 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Sushi } from '../models/sushi.model';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { SushiService } from '../services/sushi.service';
 
 @Component({
   selector: 'sushi-page',
   templateUrl: './sushi-page.component.html',
   styleUrls: ['./sushi-page.component.scss'],
 })
-export class SushiPageComponent implements OnInit {
-  public sushi: Sushi[];
-  constructor() {}
+export class SushiPageComponent {
+  get sushi() {
+    return this.sushiService.getSushies();
+  }
+  constructor(private router: Router, private sushiService: SushiService) {}
 
-  ngOnInit(): void {
-    this.sushi = [
-      {
-        id: '123',
-        name: 'Ivan',
-        address: 'Lviv',
-        steetNumber: 15,
-        productsOfSushi: 'Cheese Roll',
-        phone: '+380123456789',
-        status: 'kichen',
-      },
-      {
-        id: '123',
-        name: 'Ivan',
-        address: 'Lviv',
-        steetNumber: 15,
-        productsOfSushi: 'Cheese Roll',
-        phone: '+380123456789',
-        status: 'kichen',
-      },
-      {
-        id: '123',
-        name: 'Ivan',
-        address: 'Lviv',
-        steetNumber: 15,
-        productsOfSushi: 'Cheese Roll',
-        phone: '+380123456789',
-        status: 'kichen',
-      },
-      {
-        id: '123',
-        name: 'Ivan',
-        address: 'Lviv',
-        steetNumber: 15,
-        productsOfSushi: 'Cheese Roll',
-        phone: '+380123456789',
-        status: 'kichen',
-      },
-      {
-        id: '123',
-        name: 'Ivan',
-        address: 'Lviv',
-        steetNumber: 15,
-        productsOfSushi: 'Cheese Roll',
-        phone: '+380123456789',
-        status: 'kichen',
-      },
-      {
-        id: '123',
-        name: 'Ivan',
-        address: 'Lviv',
-        steetNumber: 15,
-        productsOfSushi: 'Cheese Roll',
-        phone: '+380123456789',
-        status: 'kichen',
-      },
-    ];
+  public navigate() {
+    this.router.navigate(['./new-order'])
   }
 }

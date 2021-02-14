@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SushiListComponent } from './sushi-list.component';
-import { SushiCardModule } from '../sushi-card/sushi-card.module';
-
-
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [SushiListComponent],
-  imports: [CommonModule, SushiCardModule],
-  exports: [SushiListComponent]
+  imports: [CommonModule, MatTableModule],
+  exports: [SushiListComponent],
 })
 export class SushiListModule {}

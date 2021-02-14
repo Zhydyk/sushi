@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { SushiPageModule } from './sushi-page/sushi-page.module';
 import { SushiHeaderModule } from './sushi-header/sushi-header.module';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatTableModule } from '@angular/material/table';
+import { SushiFormModule } from './sushi-form/sushi-form.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MatSliderModule } from '@angular/material/slider';
     AppRoutingModule,
     SushiPageModule,
     SushiHeaderModule,
-    MatSliderModule
+    MatSliderModule,
+    MatTableModule,
+    SushiFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

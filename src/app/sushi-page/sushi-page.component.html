@@ -2,6 +2,7 @@
 <div class="sushi-page-main">
   <div class="sushi-page-container">
     <h2>Orders</h2>
-    <sushi-list></sushi-list>
+    <button (click)="navigate()">New Order</button>
+    <sushi-list [sushiList]=sushi></sushi-list>
   </div>
 </div>

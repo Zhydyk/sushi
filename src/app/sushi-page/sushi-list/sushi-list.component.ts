@@ -10,6 +10,8 @@ export class SushiListComponent implements OnInit {
   @Input()
   public sushiList: Sushi[];
 
+  public displayedColumns: string[] = ['number', 'name', 'address', 'phone', 'product', 'status'];
+
   constructor() { }
 
   ngOnInit(): void {

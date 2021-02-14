@@ -2,7 +2,7 @@ export interface Sushi {
   id: string;
   name: string;
   address: string;
-  steetNumber: number;
+  streetNumber: number;
   productsOfSushi: string;
   phone: string;
   status?: string;
